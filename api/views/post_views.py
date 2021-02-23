@@ -12,7 +12,6 @@ from ..serializers import PostSerializer, UserSerializer
 
 # Create your views here.
 class Posts(generics.ListCreateAPIView):
-    permission_classes=(IsAuthenticated,)
     serializer_class = PostSerializer
     def get(self, request):
         """Index request"""
